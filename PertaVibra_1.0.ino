@@ -276,6 +276,7 @@ int tempo10[] = {
   3, 3, 3,
 };
 
+
 void setup(void)
 {
   pinMode(23, OUTPUT);
@@ -328,17 +329,45 @@ void setup(void)
 
 }
 
-                                       // Program Utama
+/*********     MAIN PROGRAM    *********/
+
+
+// Program Utama
+
 void loop()
-{
-
-
-
+   {
  
 
-}
-                                      // Program Menu Awal
 
+   }
+
+
+
+
+///////////////////////////////////////////////
+/*       SUB PROGRAM START FROM HERE         */
+///////////////////////////////////////////////
+
+void rata_rata_mati(){
+
+}
+
+void rata_rata_nyala(){
+
+}
+
+void apakah_berisi(){
+  
+}
+
+
+
+///////////////////////////////////////////////
+/*     TESTING PROGRAM START FROM HERE       */
+///////////////////////////////////////////////
+
+
+// Program Menu Awal
 void menu_awal(){
   lcd.clear();
   lcd.print("Selamat Datang");
@@ -349,7 +378,7 @@ void menu_awal(){
   button();
 }
 
-                                      // Program DEMO
+// Program DEMO
 void demo_progress(){
   lcd.clear();
   lcd.print("Selamat Datang");
@@ -376,65 +405,72 @@ void demo_progress(){
 }
 
 
-                                      // Program pembacaan sensor 1
+///////////////////////////////////////////////
+/*      SENSOR PROGRAM START FROM HERE       */
+///////////////////////////////////////////////
+
+// Program pembacaan sensor 1
 void baca_sensor_1(){
   
-sensorValue = analogRead(sensor1);
-digitalWrite(led_utama, HIGH);
-lcd.clear();
-lcd.setCursor(0, 0);
-sing(1);
-lcd.print("Nilai sensor 1 ");
-lcd.setCursor(0, 1);
-lcd.print(sensorValue, DEC);
-delay(2000);
+  sensorValue = analogRead(sensor1);
+  digitalWrite(led_utama, HIGH);
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  sing(1);
+  lcd.print("Nilai sensor 1 ");
+  lcd.setCursor(0, 1);
+  lcd.print(sensorValue, DEC);
+  delay(200);
 }
 
-                                      // Program pembacaan sensor 2
+// Program pembacaan sensor 2
 void baca_sensor_2(){
   
-sensorValue = analogRead(sensor2);
-digitalWrite(led_utama, HIGH);
-lcd.clear();
-lcd.setCursor(0, 0);
-sing(1);
-lcd.print("Nilai sensor 2 ");
-lcd.setCursor(0, 1);
-lcd.print(sensorValue, DEC);
-delay(2000);
+  sensorValue = analogRead(sensor2);
+  digitalWrite(led_utama, HIGH);
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  sing(1);
+  lcd.print("Nilai sensor 2 ");
+  lcd.setCursor(0, 1);
+  lcd.print(sensorValue, DEC);
+  delay(200);
 }
 
-                                      // Program pembacaan sensor 3
+// Program pembacaan sensor 3
 void baca_sensor_3(){
   
-sensorValue = analogRead(sensor3);
-digitalWrite(led_utama, HIGH);
-lcd.clear();
-lcd.setCursor(0, 0);
-sing(1);
-lcd.print("Nilai sensor 3 ");
-lcd.setCursor(0, 1);
-lcd.print(sensorValue, DEC);
-delay(2000);
+  sensorValue = analogRead(sensor3);
+  digitalWrite(led_utama, HIGH);
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  sing(1);
+  lcd.print("Nilai sensor 3 ");
+  lcd.setCursor(0, 1);
+  lcd.print(sensorValue, DEC);
+  delay(200);
 }
 
-                                      // Program pembacaan sensor 4
+// Program pembacaan sensor 4
 void baca_sensor_4(){
   
-sensorValue = analogRead(sensor4);
-digitalWrite(led_utama, HIGH);
-lcd.clear();
-lcd.setCursor(0, 0);
-sing(1);
-lcd.print("Nilai sensor 4 ");
-lcd.setCursor(0, 1);
-lcd.print(sensorValue, DEC);
-delay(2000);
+  sensorValue = analogRead(sensor4);
+  digitalWrite(led_utama, HIGH);
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  sing(1);
+  lcd.print("Nilai sensor 4 ");
+  lcd.setCursor(0, 1);
+  lcd.print(sensorValue, DEC);
+  delay(200);
 }
 
 
-                                       // Program Start Motor 1
 
+///////////////////////////////////////////////
+/*      MOTOR PROGRAM START FROM HERE        */
+///////////////////////////////////////////////
+// Program Start Motor 1
 void start_motor_1(){
   
   lcd.clear();
@@ -447,7 +483,7 @@ void start_motor_1(){
 
   }
 
-                                       // Program Start Motor 2
+// Program Start Motor 2
 void start_motor_2(){
 
   lcd.clear();
@@ -460,7 +496,7 @@ void start_motor_2(){
 
   }
 
-                                       // Program Start Motor 3
+// Program Start Motor 3
 void start_motor_3(){
 
   lcd.clear();
@@ -473,7 +509,7 @@ void start_motor_3(){
 
   }
 
-                                       // Program Start Motor 4
+// Program Start Motor 4
 void start_motor_4(){
 
   lcd.clear();
@@ -486,7 +522,7 @@ void start_motor_4(){
 
   }
 
-                                       // Program Stop Motor 1
+// Program Stop Motor 1
  void stop_motor_1(){
   
   sing(2);
@@ -495,7 +531,7 @@ void start_motor_4(){
   noTone(buzzer);
   }
 
-                                       // Program Stop Motor 2
+// Program Stop Motor 2
   void stop_motor_2(){
   
   sing(2);
@@ -504,7 +540,7 @@ void start_motor_4(){
   noTone(buzzer);
   }
 
-                                       // Program Stop Motor 3
+ // Program Stop Motor 3
   void stop_motor_3(){
   
   sing(2);
@@ -513,7 +549,7 @@ void start_motor_4(){
   noTone(buzzer);
   }
 
-                                       // Program Stop Motor 4
+// Program Stop Motor 4
   void stop_motor_4(){
   
   sing(2);
@@ -522,8 +558,12 @@ void start_motor_4(){
   noTone(buzzer);
   }
 
-  
-                                       // Program Tombol
+
+///////////////////////////////////////////////
+/*     BUTTON PROGRAM START FROM HERE        */
+///////////////////////////////////////////////  
+
+// Program Tombol
 void button() {
   Serial.println(lcdkeys);
   lcdkeys=analogRead(0);
@@ -587,7 +627,9 @@ void button() {
 
 
 
-                                        // Program Suara
+///////////////////////////////////////////////
+/*       SOUND PROGRAM START FROM HERE       */
+///////////////////////////////////////////////
 int song = 0;
 void sing(int s) {
   song = s;
